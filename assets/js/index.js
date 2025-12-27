@@ -54,14 +54,16 @@ async function getToDayImage() {
     if (response.ok) {
       showLoader();
       let backEndData = await response.json();
+      console.log(backEndData) ; 
+
       todayImg.setAttribute("src", backEndData.url);
       todayDesc.innerHTML = backEndData.explanation;
       todayTitle.innerHTML = backEndData.title;
-      todayCopy.innerHTML = backEndData.copyright;
+      todayCopy.innerHTML = backEndData.copyright || "";
       todayDate.innerHTML = backEndData.date;
       todayMedia.innerHTML = backEndData.media_type;
       todayHDImg.setAttribute("href", backEndData.hdurl);
-      shownDate.innerHTML = dateInput.value = backEndData.date;
+      shownDate.innerHTML = backEndData.date;
       dateDetails.innerHTML = backEndData.date;
     } else {
       throw new Error("The data was not retrieved.");
@@ -559,5 +561,8 @@ function searchAndShow(name , obj){
 planetDetails.innerHTML = result ; 
 
 }
+dateInput.addEventListener('change',() =>{
+    shownDate.innerHTML = dateInput.value ; 
+})
 
 
