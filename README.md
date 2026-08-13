@@ -41,9 +41,9 @@ To run the project locally on your machine, follow these steps:
 ---
 
 ## 🔗 APIs Used
-* **NASA APOD API** - For the Astronomy Picture of the Day.
-* **Space Launch Now API** - For upcoming space launches.
-* **Solar System OpenData** - For planetary information.
+* [NASA APOD API]([https://api.nasa.gov/](https://api.nasa.gov/planetary/apod?api_key=YOUR_API_KEY_HERE)) - For Astronomy Picture of the Day.
+* [Space Launch Now API]([https://thespacedevs.com/llapi](https://lldev.thespacedevs.com/2.3.0/launches/upcoming/?limit=10')) - For upcoming space launches.
+* [Solar System OpenData]([https://api.le-systeme-solaire.net/](https://solar-system-opendata-proxy.vercel.app/api/planets)) - For planetary information.
 
 ---
 > **Developed with passion for space science and web development** 👨‍💻
